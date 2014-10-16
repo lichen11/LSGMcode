@@ -1,0 +1,6 @@
+function [X] = spectralEmbed(A, numdim)
+
+[X, sval, ~] = svds(A,numdim);
+X = X*sqrt(sval);
+%[X,evals]=eigs(A,numdim);
+%X=X*sqrt(abs(evals));
